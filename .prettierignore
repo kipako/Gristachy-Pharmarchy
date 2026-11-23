@@ -1,0 +1,5 @@
+node_modules/
+data/
+legacy-template/
+coverage/
+package-lock.json

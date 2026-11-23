@@ -1,0 +1,40 @@
+{
+  "name": "pharmarchy-review-foundation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A regulated-pharmacy storefront foundation with pharmacist-review order intake.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node --watch server/index.js",
+    "start": "node server/index.js",
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage",
+    "catalog:validate": "node server/catalog-cli.js validate",
+    "catalog:import": "node server/catalog-cli.js import",
+    "catalog:check": "npm run catalog:validate -- --file catalog/products-template.csv && npm run catalog:validate -- --file catalog/demo-products.csv",
+    "config:check": "node --input-type=module -e \"import { loadStorefrontConfig } from './server/storefront.js'; loadStorefrontConfig();\"",
+    "check": "node --check server/index.js && node --check server/app.js && node --check server/database.js && node --check server/auth.js && node --check server/audit.js && node --check server/catalog.js && node --check server/catalog-cli.js && node --check server/storefront.js && node --check server/store.js && node --check server/staff-store.js && node --check public/app.js",
+    "lint": "eslint . --max-warnings=0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify": "npm run check && npm run config:check && npm run catalog:check && npm run lint && npm run format:check && npm test && npm audit --omit=dev"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "csv-parse": "^7.0.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "prettier": "^3.10.1",
+    "supertest": "^7.1.0"
+  }
+}

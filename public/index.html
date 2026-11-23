@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-TZ">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Gristachy Pharmarchy is a demo pharmacy storefront foundation with pharmacist-review order requests."
+    />
+    <meta name="theme-color" content="#0b696a" />
+    <title>Gristachy Pharmarchy — pharmacist review first</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#app">Skip to content</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a id="header-brand-link" class="brand" href="#/" aria-label="Gristachy Pharmarchy home">
+            <span class="brand-mark" aria-hidden="true">✚</span>
+            <span>
+              <strong id="header-brand-name">Gristachy Pharmarchy</strong>
+              <small id="header-brand-tagline">Review-first pharmacy</small>
+            </span>
+          </a>
+          <nav class="primary-nav" aria-label="Primary navigation">
+            <a data-nav-route="home" href="#/">Home</a>
+            <a data-nav-route="shop" href="#/shop">Shop</a>
+            <a data-nav-route="safety" href="#/safety">Safety</a>
+            <a data-nav-route="staff" href="#/staff">Staff</a>
+          </nav>
+          <a class="cart-link" data-nav-route="cart" href="#/cart" aria-label="View cart">
+            <span class="cart-icon" aria-hidden="true">Bag</span>
+            <span>Cart</span>
+            <strong id="cart-count" class="cart-count" aria-live="polite">0</strong>
+          </a>
+        </div>
+      </header>
+
+      <aside class="demo-banner" role="note">
+        <div class="container demo-banner-inner">
+          <span class="status-dot" aria-hidden="true"></span>
+          <p>
+            <strong>Development demo:</strong> no payment, prescription verification, or medicine
+            dispensing occurs here.
+          </p>
+          <a href="#/safety">Review the safety boundary</a>
+        </div>
+      </aside>
+
+      <main id="app" class="site-main" tabindex="-1"></main>
+
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <section>
+            <div class="brand footer-brand">
+              <span class="brand-mark" aria-hidden="true">✚</span>
+              <span>
+                <strong id="footer-brand-name">Gristachy Pharmarchy</strong>
+                <small id="footer-brand-tagline">Review-first pharmacy</small>
+              </span>
+            </div>
+            <p class="footer-copy">
+              A transparent demonstration of a pharmacist-review commerce foundation built with
+              safety and traceability in mind.
+            </p>
+          </section>
+          <section>
+            <h2>Explore</h2>
+            <ul>
+              <li><a href="#/shop">Demo catalogue</a></li>
+              <li><a href="#/cart">Your cart</a></li>
+              <li><a href="#/safety">Safety boundary</a></li>
+              <li><a href="#/staff">Demo staff console</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2 id="operations-heading">Service information</h2>
+            <p id="operations-message" class="footer-copy">
+              Public contact, service area, delivery, and operating-hour information are being
+              prepared and will be published only after approval.
+            </p>
+          </section>
+        </div>
+        <div class="container footer-bottom">
+          © <span id="year"></span> <span id="footer-brand-inline">Gristachy Pharmarchy</span> demo
+          foundation. Not a live pharmacy service.
+        </div>
+      </footer>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>

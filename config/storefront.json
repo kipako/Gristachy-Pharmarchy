@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "brand": {
+    "displayName": "Gristachy Pharmarchy",
+    "shortName": "Gristachy",
+    "tagline": "Review-first pharmacy",
+    "legalName": ""
+  },
+  "theme": {
+    "primaryColor": "#0B696A",
+    "primaryDarkColor": "#075253",
+    "accentColor": "#F4B942"
+  },
+  "locale": {
+    "currency": "TZS",
+    "locale": "en-TZ"
+  },
+  "catalog": {
+    "publicationStatus": "template_only",
+    "approvalNotice": "Only products approved by authorised pharmacy and business reviewers may be imported or published."
+  },
+  "operations": {
+    "publicationStatus": "not_published",
+    "publicMessage": "Public contact, service area, delivery, and operating-hour information are being prepared and will be published only after approval.",
+    "phone": "",
+    "email": "",
+    "address": "",
+    "serviceAreas": [],
+    "hours": []
+  }
+}
